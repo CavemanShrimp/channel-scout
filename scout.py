@@ -42,8 +42,8 @@ _local = BASE / "config.local.json"
 if _local.exists():
     CONFIG.update(json.loads(_local.read_text(encoding="utf-8")))
 # Cloud (GitHub Actions) overrides — secrets come in as environment variables.
-if os.environ.get("YT_API_KEY"):
-    CONFIG["youtube_api_key"] = os.environ["YT_API_KEY"]
+if os.environ.get("YT_API_KEY", "").strip():
+    CONFIG["youtube_api_key"] = os.environ["YT_API_KEY"].strip()
 DB_PATH = BASE / "seen.db"
 OUT_DIR = BASE / "out"
 LOG_PATH = BASE / "scout.log"
