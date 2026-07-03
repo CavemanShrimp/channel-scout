@@ -1,0 +1,9 @@
+# secrets — never commit these
+service_account.json
+config.local.json
+
+# local outputs (the Google Sheet is the record)
+out/
+scout.log
+
+__pycache__/

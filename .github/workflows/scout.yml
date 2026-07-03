@@ -1,0 +1,50 @@
+name: Daily Channel Scout
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC = 8 AM Texas (CDT); 7 AM in winter (CST)
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max leads this run (blank = config default)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: channel-scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run scout
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          LIMIT="${{ github.event.inputs.limit }}"
+          if [ -n "$LIMIT" ]; then
+            python scout.py --force --limit "$LIMIT"
+          else
+            python scout.py --force
+          fi
+
+      - name: Commit updated seen.db
+        run: |
+          git config user.name "channel-scout-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add seen.db
+          git diff --cached --quiet || git commit -m "scout state $(date -u +%F)"
+          git push

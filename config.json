@@ -1,0 +1,40 @@
+{
+  "youtube_api_key": "SET_IN_config.local.json_OR_YT_API_KEY_ENV",
+
+  "google_sheet_id": "1Tgo-aJYBZIfew9mvOUQaZ2swzkuQL7Q49xFeDCXV60Q",
+  "service_account_json": "service_account.json",
+  "sheet_tab": "Leads",
+
+  "region_code": "US",
+  "preferred_countries": ["US", "CA", "GB", "AU", "NZ", "IE"],
+
+  "subs_min": 10000,
+  "subs_max": 500000,
+  "leads_per_day": 25,
+  "max_searches_per_run": 6,
+  "categories_per_day": 3,
+  "require_upload_within_days": 60,
+  "max_uploads_per_week": 10,
+  "min_longform_in_last10": 2,
+
+  "categories": {
+    "tech": ["home lab setup", "self hosted apps", "cybersecurity tutorial", "linux tips", "raspberry pi project"],
+    "ai": ["ai agents tutorial", "claude code workflow", "local llm setup", "ai automation business", "prompt engineering"],
+    "business_finance": ["personal finance explained", "small business youtube", "side hustle breakdown", "investing for beginners", "marketing strategy"],
+    "education": ["explained animation", "history documentary channel", "math visualized", "how things work", "study tips"],
+    "science_engineering": ["engineering project build", "diy electronics", "space explained", "physics demo", "3d printing project"],
+    "gaming": ["gaming video essay", "indie game devlog", "minecraft build", "speedrun explained", "game design analysis"],
+    "vr": ["vr hardware review", "quest 3 games", "vr fitness", "virtual reality experience", "vr development"],
+    "marketing_creator": ["youtube growth tips", "content creator business", "ai search optimization", "brand storytelling", "video marketing strategy"],
+    "podcast": ["video podcast full episode", "interview podcast", "tech podcast", "business podcast", "founder interview"],
+    "diy_maker": ["workshop project", "woodworking build", "home renovation timelapse", "maker project", "cnc project"]
+  },
+
+  "hook_templates": [
+    "Just watched \"{latest_title}\" — great instincts on the storytelling, and with {subs_k} subs you're clearly onto something. I'm a video editor for NetworkChuck (5M+ subs) and I help {category} channels tighten pacing and retention. If you ever want to post more than {cadence} without burning out, I'd love to show you what I'd do with one of your videos. — cavemanshrimp.com",
+    "Hey {channel} — \"{latest_title}\" popped up for me and the content is strong. I edit long-form for NetworkChuck and a few other creators, and I kept thinking your ideas deserve tighter packaging. Happy to cut a free sample from your raw footage so you can judge for yourself. — cavemanshrimp.com",
+    "You're at {subs_k} subs posting {cadence} — that's the exact stage where a dedicated editor changes the growth curve. I've spent years cutting {category} content for channels with 5M+ subscribers (NetworkChuck, others). If freeing up 10+ hrs/week sounds useful, my work's at cavemanshrimp.com.",
+    "Hey {channel} — loved the concept behind \"{latest_title}\". I'm an editor/motion designer (NetworkChuck + O-X Media) and I specialize in making {category} content feel effortless to watch: custom motion graphics, retention-focused pacing. Open to a quick chat? Portfolio: cavemanshrimp.com",
+    "\"{latest_title}\" was a great watch. One thing I noticed: with your upload pace ({cadence}), a second pair of hands on the edit could let you double output without touching quality. That's literally my job — I cut for NetworkChuck (5M+). Sample edit on me: cavemanshrimp.com"
+  ]
+}
