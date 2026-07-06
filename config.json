@@ -30,11 +30,24 @@
     "diy_maker": ["workshop project", "woodworking build", "home renovation timelapse", "maker project", "cnc project"]
   },
 
+  "category_labels": {
+    "tech": "tech",
+    "ai": "AI",
+    "business_finance": "business & finance",
+    "education": "education",
+    "science_engineering": "engineering & maker",
+    "gaming": "gaming",
+    "vr": "VR",
+    "marketing_creator": "creator-economy",
+    "podcast": "podcast",
+    "diy_maker": "DIY & maker"
+  },
+
   "hook_templates": [
-    "Just watched \"{latest_title}\" — great instincts on the storytelling, and with {subs_k} subs you're clearly onto something. I'm a video editor for NetworkChuck (5M+ subs) and I help {category} channels tighten pacing and retention. If you ever want to post more than {cadence} without burning out, I'd love to show you what I'd do with one of your videos. — cavemanshrimp.com",
-    "Hey {channel} — \"{latest_title}\" popped up for me and the content is strong. I edit long-form for NetworkChuck and a few other creators, and I kept thinking your ideas deserve tighter packaging. Happy to cut a free sample from your raw footage so you can judge for yourself. — cavemanshrimp.com",
-    "You're at {subs_k} subs posting {cadence} — that's the exact stage where a dedicated editor changes the growth curve. I've spent years cutting {category} content for channels with 5M+ subscribers (NetworkChuck, others). If freeing up 10+ hrs/week sounds useful, my work's at cavemanshrimp.com.",
-    "Hey {channel} — loved the concept behind \"{latest_title}\". I'm an editor/motion designer (NetworkChuck + O-X Media) and I specialize in making {category} content feel effortless to watch: custom motion graphics, retention-focused pacing. Open to a quick chat? Portfolio: cavemanshrimp.com",
-    "\"{latest_title}\" was a great watch. One thing I noticed: with your upload pace ({cadence}), a second pair of hands on the edit could let you double output without touching quality. That's literally my job — I cut for NetworkChuck (5M+). Sample edit on me: cavemanshrimp.com"
+    "Hey {channel} — I'm Austin, video editor for NetworkChuck (5M+ subs). My lane is making complex topics effortless to watch: custom motion graphics, retention-driven pacing, full edits from raw footage to publish-ready. Found you through \"{latest_title}\" and think there's a lot I could bring to the channel. Worth a conversation? Portfolio: cavemanshrimp.com",
+    "Hey — Austin here, editor for NetworkChuck (5M+ subs) and a roster of independent creators. What I bring: one editor who owns the whole post pipeline — the cut, motion graphics, and shorts versions — so you only think about ideas and filming. If {channel} is at the point where post-production deserves a pro, my work is at cavemanshrimp.com.",
+    "Hey {channel} — I edit for NetworkChuck (5M+ subs), and the thing I obsess over is retention: pacing, visual variety, motion graphics that hold people past the point they meant to stop watching. That skill set transfers directly to {category} content. If leveling up the edit has been on your mind, I'd love to talk. — Austin, cavemanshrimp.com",
+    "Hey — I'm Austin, long-form editor for NetworkChuck (5M+ subs) who also cuts shorts built for discovery. For a creator, that means one editor covering both: flagship videos with custom graphics, plus verticals that pull new viewers to the channel. Came across {channel} through \"{latest_title}\" — if serious editing firepower sounds useful, I'm at cavemanshrimp.com.",
+    "Hey {channel} — quick intro: I'm Austin, editor for NetworkChuck (5M+ subs). Beyond the usual Premiere/After Effects toolkit, I build custom code-driven animations (Remotion) — visuals most editors can't offer. If you've ever seen graphics on tech YouTube and wished they were yours, that's the kind of thing I bring. Work: cavemanshrimp.com"
   ]
 }

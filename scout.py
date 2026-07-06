@@ -271,11 +271,12 @@ def make_hook(channel, latest_title, subs, category, cadence):
     day = dt.date.today().toordinal()
     tpl = CONFIG["hook_templates"][(day + len(channel)) % len(CONFIG["hook_templates"])]
     subs_k = f"{subs/1000:.0f}K" if subs < 1_000_000 else f"{subs/1_000_000:.1f}M"
+    label = CONFIG.get("category_labels", {}).get(category, category.replace("_", " "))
     return tpl.format(
         channel=channel,
         latest_title=(latest_title[:70] + "…") if len(latest_title) > 70 else latest_title,
         subs_k=subs_k,
-        category=category.replace("_", " "),
+        category=label,
         cadence=cadence,
     )
 
@@ -407,7 +408,8 @@ def main():
             hook = make_hook(name, latest_title, subs, category, cadence)
 
             leads.append([
-                dt.date.today().isoformat(), name, url, subs, category.replace("_", " "),
+                dt.date.today().isoformat(), name, url, subs,
+                CONFIG.get("category_labels", {}).get(category, category.replace("_", " ")),
                 sn.get("country", ""), schedule, latest_title,
                 ", ".join(emails), ", ".join("@" + h for h in x_handles),
                 ", ".join(linkedin), ", ".join(others), hook, "",
